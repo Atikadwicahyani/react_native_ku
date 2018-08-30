@@ -1,20 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image} from 'react-native';
+import Judul from './Components/Judul'
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Nama : Atika Dwi Cahyani</Text>
-        <Text>Kelas : XI RPL 4</Text>
-        <Text>No absen : 06</Text>
-        <Image style={{width: 250, height: 300}}
+      <View>
+        <Judul></Judul>
+        <Text>Nama: Atika Dwi Cahyani </Text>
+        <Text>Kelas: XI_RPL 4 </Text>
+        <Text>No.Absen: 06 </Text>
+        <Image style={{width: 400, height:500}}
         source={require('./1.jpeg')}
         />
       </View>
