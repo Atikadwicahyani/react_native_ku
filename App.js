@@ -1,41 +1,47 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
-import Judul from './Components/Judul'
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 
-export default class App extends Component {
+
+export default class App extends Component<{}> {
   render() {
     return (
-      <View>
-        <Judul title= "BIODATA"/>
-        <Judul title= "LOGIN"/>
-        <Judul title= "FORM"/>
-        
-        <Text>Nama: Atika Dwi Cahyani </Text>
-        <Text>Kelas: XI_RPL 4 </Text>
-        <Text>No.Absen: 06 </Text>
-        <Image style={{width: 400, height:500}}
-        source={require('./1.jpeg')}
-        />
+    
+      <View style={styles.container}>
+      <RootStack>
+      <HomeScreen>
+      <Text style={styles.welcome}>
+      Welcome To React Native!
+      </Text>
+      <Text style={styles.instructions}>
+      Nama : Atika Dwi Cahyani
+      </Text>
+      <Text style={styles.instructions}>
+      Kelas : XI RPL 4
+      </Text>
+      <Text style={styles.instructions}>
+      No.Absen :06
+      </Text>
+      <HomeScreen/>
+      <RootStack/>
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
-  container: {
+  container : {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor:'#455a64',
   },
-  welcome: {
+  welcome:{
     fontSize: 20,
-    textAlign: 'center',
+    textAlign:'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
+  instructions:{
+    textAlign:'center',
+    color:'#333333',
     marginBottom: 5,
   },
 });
